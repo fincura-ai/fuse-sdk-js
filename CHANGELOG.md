@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v1.0.2](https://github.com/fincura-ai/fuse-sdk-js/compare/763a605100d066ca235b40d725bf6ed879c77f9e..v1.0.2) - 2026-04-23
+#### 🧹 Miscellaneous Chores
+- **(deps)** update lock - ([763a605](https://github.com/fincura-ai/fuse-sdk-js/commit/763a605100d066ca235b40d725bf6ed879c77f9e)) - [@sylver](https://github.com/sylver)
+
+- - -
+
 ## [v1.0.1](https://github.com/fincura-ai/fuse-sdk-js/compare/56ad34b41ce949c93b3ebf541eaeb56f14e29bef..v1.0.1) - 2026-04-23
 #### 🧹 Miscellaneous Chores
 - **(deps)** high severity vulnerability - ([56ad34b](https://github.com/fincura-ai/fuse-sdk-js/commit/56ad34b41ce949c93b3ebf541eaeb56f14e29bef)) - [@sylver](https://github.com/sylver)
