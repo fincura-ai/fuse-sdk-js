@@ -1,5 +1,7 @@
 import { adjustments } from './endpoints/adjustments.js';
+import { appointments } from './endpoints/appointments.js';
 import { claims } from './endpoints/claims.js';
+import { patients } from './endpoints/patients.js';
 import { payments } from './endpoints/payments.js';
 import { paymentTypes } from './endpoints/paymentTypes.js';
 import { fuseClient } from './lib/client.js';
@@ -22,6 +24,11 @@ export {
   type FuseAdjustmentType,
 } from './endpoints/adjustments.js';
 export {
+  type FuseAppointmentRow,
+  type FuseAppointmentTabRequest,
+  type FuseAppointmentTabResponse,
+} from './endpoints/appointments.js';
+export {
   CloseClaimAdjustmentType,
   type FuseClaimDetails,
   type FuseClaimDetailsResponse,
@@ -33,6 +40,14 @@ export {
   type FuseCloseClaimResponse,
   type FuseServiceLineItem,
 } from './endpoints/claims.js';
+export {
+  type FuseDashboardBenefitPlan,
+  type FuseDashboardBenefitPlanEntry,
+  type FuseDashboardCarrier,
+  type FuseDashboardPolicyHolderBenefitPlan,
+  type FuseDashboardPolicyHolderDetails,
+  type FusePatientDashboardResponse,
+} from './endpoints/patients.js';
 export {
   type FuseBulkCreditTransaction,
   type FuseBulkInsurancePaymentRequest,
@@ -101,6 +116,12 @@ export const createFuseClient = (config: FuseApiConfig) => {
     adjustments: adjustments(client),
 
     /**
+     * Appointments management endpoints.
+     * Search appointments across a date range with optional type filtering.
+     */
+    appointments: appointments(client),
+
+    /**
      * Claims management endpoints.
      * Search, get details, and close claims.
      */
@@ -111,6 +132,12 @@ export const createFuseClient = (config: FuseApiConfig) => {
      * List available insurance payment types.
      */
     paymentTypes: paymentTypes(client),
+
+    /**
+     * Patients management endpoints.
+     * Fetch patient dashboard data including benefit plans.
+     */
+    patients: patients(client),
 
     /**
      * Payments management endpoints.

@@ -69,6 +69,14 @@ const config = extractConfigFromToken(token);
 
 - `fuse.paymentTypes.list()` — List available insurance payment types
 
+### Appointments
+
+- `fuse.appointments.search({ from, to, appointmentTypeIds? })` — Search appointments across a date range; handles pagination internally and returns all rows
+
+### Patients
+
+- `fuse.patients.getDashboard(patientId)` — Fetch the patient dashboard including benefit plans (insurance coverage)
+
 ## Logging
 
 The SDK is silent by default. Enable logging for debugging:
